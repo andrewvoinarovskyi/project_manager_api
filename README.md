@@ -1,24 +1,22 @@
-# README
+# Steps to run the project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Install Ruby, bundle, git, Postgresql
 
-Things you may want to cover:
+## Clone this repo
 
-* Ruby version
+## install dependencies for project
+bundle install
 
-* System dependencies
+## Configure the database 
+Create Postgres Database for project, Postgres User with all privileges on database
 
-* Configuration
+Create .env file from .env.example with correct credentials for database
 
-* Database creation
+## create database and run migrations
+rails db:drop db:create db:migrate
 
-* Database initialization
+## Run specs to ensure in correct working
+bundle exec rspec
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Run server 
+rails server
